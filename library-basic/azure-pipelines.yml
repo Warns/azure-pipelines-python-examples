@@ -1,12 +1,11 @@
 # To use this pipeline standalone, uncomment the `trigger`
 # and `name` stanzas. As-is, the pipeline is suitable for
 # importing as a template
-#
+##
 # trigger:
 # - master
 # name: $(Date:yyyyMMdd)$(Rev:.r)
 jobs:
-
 - job: 'library_basic'
   pool:
     vmImage: 'Ubuntu-16.04'
