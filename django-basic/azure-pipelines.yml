@@ -29,14 +29,14 @@ jobs:
       pip install -r django-basic/requirements.txt
     displayName: 'Install dependencies'
 
-  - script: |
-      pip install pytest-django
-      cd django-basic/azuredemo
-      pytest --junitxml=../../reports/django-basic.xml
-    displayName: 'Run tests'
+#   - script: |
+#       pip install pytest-django
+#       cd django-basic/azuredemo
+#       pytest --junitxml=../../reports/django-basic.xml
+#     displayName: 'Run tests'
 
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFiles: 'reports/django-basic.xml'
-      testRunTitle: '$(Agent.OS) - $(Build.BuildNumber)[$(Agent.JobName)] - Python $(python.version)'
-    condition: succeededOrFailed()
+#   - task: PublishTestResults@2
+#     inputs:
+#       testResultsFiles: 'reports/django-basic.xml'
+#       testRunTitle: '$(Agent.OS) - $(Build.BuildNumber)[$(Agent.JobName)] - Python $(python.version)'
+#     condition: succeededOrFailed()
