@@ -2,7 +2,6 @@ import io
 
 from setuptools import find_packages, setup
 
-
 setup(
     name='demolib',
     version='1.0.0',
